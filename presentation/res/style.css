@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    scroll-behavior: smooth;
+}
+h1 {
+    font-size: 106px;
+    margin-top: 0px;
+    padding-top: 400px;
+}
+h2 {
+    font-size: 66px;
+    margin-top: 0px;
+    padding-top: 100px;
+}
+h3 {
+    font-size: 40px;
+}
+p {
+    font-size: 35px;
+    padding-top: 70px;
+}
+pre {
+    font-size: 35px;
+    text-align: left;
+}
+ul {
+    text-align: left;
+}
+li {
+    font-size: 35px;
+}
+#back {
+    position: fixed;
+    z-index: 1;
+}
+.main-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    z-index: 10;
+}
+.slides-container {
+    text-align: center;
+    height: 100%
+}
+.slide {
+    height: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.control {
+    position: fixed;
+    z-index: 10;
+    width: 300px;
+    display: flex;
+    top: 85%;
+    left: 86%;
+}
+@media (min-width: 800px) and (max-width: 1300px) {
+    .control {
+        left: 80%;
+    }
+}
+/* Round Buttons */
+
+.round-button {
+    width: 25%;
+    margin-right: 50px
+}
+.round-button-circle {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    border: 10px solid #cfdcec;
+    overflow: hidden;
+    background: #4679BD;
+    box-shadow: 0 0 3px gray;
+}
+.round-button-circle:hover {
+    background: #30588e;
+}
+.round-button a {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-align: center;
+    color: #e2eaf3;
+    font-family: Verdana;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}

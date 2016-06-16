@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" href="res/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="res/examples.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="slides-container">
+            <div class="slide">
+                <h1>D3 Overview</h1>
+            </div>
+            <div class="slide">
+                <h1>Introduction</h1>
+            </div>
+            <div class="slide">
+                <h2>Agenda</h2>
+                <div>
+                    <h3>About Data Visualisation</h3>
+                    <h3>D3 and DOM, HTML, SVG</h3>
+                    <h3>Charts and Diagrams</h4>
+                    <h3>Data Binding</h3>
+                    <h3>Demo</h3>
+                </div>
+            </div>
+            <div class="slide">
+                <h1>Data Visualization</h1>
+            </div>
+            <div class="slide">
+                <h2>Simple Chart</h2>
+                <svg class="data-vis-mnt">
+                    <g></g>
+                </svg>
+            </div>
+            <div class="slide">
+                <h1>D3 and DOM, HTML, SVG</h1>
+            </div>
+            <div class="slide">
+                <p>
+                    D3 is built on top of several common web standards.
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>DOM</li>
+                    <li>SVG</li>
+                </ul>
+                <pre>
+                    // D3 Selection API
+                    d3.select('p').size(); // select() only finds one
+                    // 1
+                    d3.selectAll('p').size(); // selectAll() finds all
+                    // 4
+                    var reds = d3.selectAll('.red');
+                    // [ > Array[1] ]
+                    reds.text();
+                    // "Red paragraph"
+                </pre>
+            </div>
+            <div class="slide">
+                <h1>Charts and Diagrams</h1>
+            </div>
+            <div class="slide">
+                <h2>Add Some Graph</h2>
+                <div class="graph-mnt"></div>
+            </div>
+            <div class="slide">
+                <h1>Data Binding</h1>
+            </div>
+            <div class="slide">
+                <p>
+
+                </p>
+                <pre>
+                    selection.data();
+                    selection.enter();
+                    selection.exit();
+
+                    var svg = d3.select('svg');
+                    svg.size();
+
+                    var rects = svg.selectAll('rect').data(sales);
+                    rects.size();
+                    selection.transition();
+
+                    rects.transition()
+                        .duration(1000)
+                        .attr('x', x(0))
+                        .attr('y', function(d, i) {
+                            return y(d.product);
+                        })
+                        .attr('height', y.rangeBand())
+                        .attr('width', function(d, i) {
+                            return x(d.count);
+                        });
+                </pre>
+            </div>
+            <div class="slide">
+                <h1>Demo</h1>
+            </div>
+        </div>
+    </div>
+    <div class="control">
+        <div class="round-button">
+            <div class="round-button-circle"><a id="scroll-down" href="javascript:void(0)" class="round-button">Down</a></div>
+        </div>
+        <div class="round-button">
+            <div class="round-button-circle"><a id="scroll-up" href="javascript:void(0)" class="round-button">Up</a></div>
+        </div>
+    </div>
+    <script defer src="src/background.js" charset="utf-8"></script>
+    <script defer src="src/scrolling.js" charset="utf-8"></script>
+    <script defer src="src/data-vis-ex.js" charset="utf-8"></script>
+    <script defer src="src/graph-ex.js" charset="utf-8"></script>
+
+</body>

@@ -1,0 +1,27 @@
+.data-vis-mnt {
+    padding-top: 200px;
+}
+.data-vis-mnt rect {
+    fill: #69e854;
+}
+.data-vis-mnt text {
+    fill: white;
+    font: 30px sans-serif;
+    text-anchor: end;
+    margin-right: 5px;
+}
+path {
+    stroke: steelblue;
+    stroke-width: 10;
+    fill: none;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 5;
+    shape-rendering: crispEdges;
+}
+.graph-mnt text {
+    fill: white;
+    font: 30px sans-serif
+}
